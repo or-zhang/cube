@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style lang="">
+    body,
+    li,
+    ul,
+    img,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /* perspective: 1000px; */
+        background: url('./images/9.jpg');
+        background-size: cover;
+    }
+
+    .containt {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        top: 200px;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        perspective: 8000px;
+        /* -webkit-transition: 5s  all;
+        -moz-transition: 5s  all;
+        transition: 5s  all; */
+        animation: myfist 8s linear infinite;
+    }
+
+    .containt li {
+        list-style: none;
+        width: 360px;
+        height: 360px;
+        position: absolute;
+        animation-duration: 8s, 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        -webkit-animation-duration: 8s, 8s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-delay: 2s;
+        -moz-animation-duration: 8s, 8s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-delay: 2s;
+        -o-animation-duration: 8s, 8s;
+        -o-animation-timing-function: linear;
+        -o-animation-iteration-count: infinite;
+        -o-animation-delay: 2s;
+    }
+
+    .containt li img {
+        height: 360px;
+        width: 360px;
+    }
+
+    .containt li:nth-child(1) {
+        transform: rotateX(90deg) translateZ(180px);
+        animation-name: li-1, opacity;
+    }
+
+    .containt li:nth-child(2) {
+        transform: rotateX(90deg) translateZ(-180px);
+        animation-name: li-2, opacity;
+    }
+
+    .containt li:nth-child(3) {
+        transform: rotateY(90deg) translateZ(180px);
+        animation-name: li-3, opacity;
+    }
+
+    .containt li:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(180px);
+        animation-name: li-4, opacity;
+    }
+
+    .containt li:nth-child(5) {
+        transform: translateZ(180px);
+        animation-name: li-5, opacity;
+    }
+
+    .containt li:nth-child(6) {
+        transform: rotateX(0deg) translateZ(-180px);
+        animation-name: li-6, opacity;
+    }
+
+    @keyframes myfist {
+        form {
+            transform: rotate3d(1, 1, 1, 60deg);
+            -webkit-transform: rotate3d(1, 1, 1, 60deg);
+            -moz-transform: rotate3d(1, 1, 1, 60deg);
+            -o-transform: rotate3d(1, 1, 1, 60deg);
+        }
+        to {
+            transform: rotate3d(1, 1, 1, 360deg);
+            -moz-transform: rotate3d(1, 1, 1, 360deg);
+            -o-transform: rotate3d(1, 1, 1, 360deg);
+            -moz-transform: rotate3d(1, 1, 1, 360deg);
+        }
+    }
+
+    @keyframes opacity {
+        40% {
+            opacity: 0.2;
+        }
+        60% {
+            opacity: 0.5;
+        }
+        80% {
+            opacity: 0.8;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes li-1 {
+        form {
+            transform: rotateX(90deg) translateZ(180px);
+            -moz-transform: rotateX(90deg) translateZ(180px);
+            -o-transform: rotateX(90deg) translateZ(180px);
+            -moz-transform: rotateX(90deg) translateZ(180px);
+        }
+        to {
+            transform: rotateX(90deg) translateZ(260px);
+            -moz-transform: rotateX(90deg) translateZ(260px);
+            -o-transform:rotateX(90deg) translateZ(260px);
+            -moz-transform: rotateX(90deg) translateZ(260px);
+        }
+    }
+
+    @keyframes li-2 {
+        form {
+            transform: rotateX(90deg) translateZ(-180px);
+            -moz-transform: rotateX(90deg) translateZ(-180px);
+            -o-transform:rotateX(90deg) translateZ(-180px);
+            -moz-transform: rotateX(90deg) translateZ(-180px);
+        }
+        to {
+            transform: rotateX(90deg) translateZ(-260px);
+             -moz-transform:rotateX(90deg) translateZ(-260px);
+            -o-transform:rotateX(90deg) translateZ(-260px);
+            -moz-transform:rotateX(90deg) translateZ(-260px);
+        }
+    }
+
+    @keyframes li-3 {
+        form {
+            transform: rotateY(90deg) translateZ(180px);
+             -moz-transform:rotateY(90deg) translateZ(180px);
+            -o-transform:rotateY(90deg) translateZ(180px);
+            -moz-transform:rotateY(90deg) translateZ(180px);
+        }
+        to {
+            transform: rotateY(90deg) translateZ(260px);
+             -moz-transform:rotateY(90deg) translateZ(260px);
+            -o-transform:rotateY(90deg) translateZ(260px);
+            -moz-transform:rotateY(90deg) translateZ(260px);
+        }
+    }
+
+    @keyframes li-4 {
+        form {
+            transform: rotateY(-90deg) translateZ(180px);
+             -moz-transform: rotateY(-90deg) translateZ(180px);
+            -o-transform: rotateY(-90deg) translateZ(180px);
+            -moz-transform: rotateY(-90deg) translateZ(180px);
+        }
+        to {
+            transform: rotateY(-90deg) translateZ(260px);
+             -moz-transform: rotateY(-90deg) translateZ(260px);
+            -o-transform: rotateY(-90deg) translateZ(260px);
+            -moz-transform: rotateY(-90deg) translateZ(260px);
+        }
+    }
+
+    @keyframes li-5 {
+        form {
+            transform: translateZ(180px);
+              -moz-transform:translateZ(180px);
+            -o-transform:translateZ(180px);
+            -moz-transform:translateZ(180px);
+        }
+        to {
+            transform: translateZ(260px);
+              -moz-transform: translateZ(260px);
+            -o-transform: translateZ(260px);
+            -moz-transform: translateZ(260px);
+        }
+    }
+
+    @keyframes li-6 {
+        form {
+            transform: rotateX(0deg) translateZ(-180px);
+              -moz-transform:rotateX(0deg) translateZ(-180px);
+            -o-transform: rotateX(0deg) translateZ(-180px);
+            -moz-transform:rotateX(0deg) translateZ(-180px);
+        }
+        to {
+            transform: rotateX(0deg) translateZ(-260px);
+            -moz-transform: rotateX(0deg) translateZ(-260px);
+            -o-transform: rotateX(0deg) translateZ(-260px);
+            -moz-transform: rotateX(0deg) translateZ(-260px);
+        }
+    }
+
+    .text {
+        position: absolute;
+        top: 100px;
+        left: 200px;
+    }
+
+    .text p {
+        font: 30px 'KaiTi';
+        color: #ffffff;
+        text-shadow: 0px 0px 3px rgba(255, 64, 64, 0.8);
+        -webkit-transition: transform 0.5s, opacity 0.1s, text-shadow 0.5s;
+        -moz-transition: transform 0.5s, opacity 0.1s, text-shadow 0.8s;
+        transition: transform 0.5s, opacity 0.1s, text-shadow 0.8s;
+        opacity: 0;
+    }
+
+    .text p {
+        transform: translateY(-20px);
+        -webkit-transform:translateY(-20px);
+        -o-transform:translateY(-20px);
+        -moz-transform: translateY(-20px);
+        padding-bottom:20px;
+    }
+    .text p:nth-child(1){
+        animation: text-1 8s linear infinite;
+        -webkit-animation:text-1 8s linear infinite;
+        -moz-animation: text-1 8s linear infinite;
+    }
+    .text p:nth-child(2){
+        animation: text-2 8s linear infinite;
+        -webkit-animation: text-2 8s linear infinite;
+        -moz-animation: text-2 8s linear infinite; 
+    }
+    .text p:nth-child(3){
+        animation: text-3 8s linear infinite;
+        -webkit-animation: text-3 8s linear infinite;
+        -moz-animation: text-3 8s linear infinite;  
+    }
+    .text p:nth-child(4){
+        animation: text-4 8s linear infinite;
+        -webkit-animation: text-4 8s linear infinite;
+        -moz-animation: text-4 8s linear infinite;  
+    }
+    .text p:nth-child(5){
+        animation: text-5 8s linear infinite;
+        -webkit-animation: text-5 8s linear infinite;
+        -moz-animation: text-5 8s linear infinite;  
+    }
+    .text p:nth-child(6){
+        animation: text-6 8s linear infinite;
+        -webkit-animation: text-6 8s linear infinite;
+        -moz-animation: text-6 8s linear infinite;  
+    }
+   
+     @keyframes text-1 {
+        16% {
+            opacity: 1;
+            text-shadow: 1px 3px 3px rgba(255, 64, 64, 0.8);
+            transform: translate(2px);
+            -webkit-transform:translate(2px);
+            -o-transform:translate(2px);
+            -moz-transform: translate(2px);
+        }
+        100%{
+            opacity: 1;
+            text-shadow: 12px 15px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(10px);
+            -webkit-transform:translateY(10px);
+            -o-transform:translateY(10px);
+            -moz-transform:translateY(10px);
+        }
+    }
+     @keyframes text-2 {
+        32%{
+            opacity: 0.8;
+            text-shadow: 12px 15px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(8px);
+            -webkit-transform: translateY(8px);
+            -o-transform: translateY(8px);
+            -moz-transform: translateY(8px);
+        }
+        100%{
+            opacity: 1;
+            text-shadow: 12px 15px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(10px);
+            -webkit-transform: translateY(10px);
+            -o-transform: translateY(10px);
+            -moz-transform: translateY(10px);
+        }
+    }
+     @keyframes text-3 {
+        48%{
+             opacity: 0.6;
+            text-shadow:3px 9px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(8px);
+            -webkit-transform: translateY(8px);
+            -o-transform: translateY(8px);
+            -moz-transform:translateY(8px);
+        }
+        100%{
+            opacity: 1;
+            text-shadow: 12px 15px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(10px);
+            -webkit-transform: translateY(10px);
+            -o-transform: translateY(10px);
+            -moz-transform: translateY(10px);
+        }
+    }
+     @keyframes text-4 {
+        64%{
+            opacity: 0.4;
+            text-shadow:3px 12px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(8px);
+            -webkit-transform: translateY(8px);
+            -o-transform: translateY(8px);
+            -moz-transform:translateY(8px);
+        }
+        100%{
+            opacity: 1;
+            text-shadow: 12px 15px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(10px);
+        }
+    }
+     @keyframes text-5 {
+        82%{
+            opacity: 0.2;
+            text-shadow:3px 13px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(8px);
+            -webkit-transform: translateY(8px);
+            -o-transform: translateY(8px);
+            -moz-transform:translateY(8px);
+        }
+        100%{
+            opacity: 1;
+            text-shadow: 12px 15px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(10px);
+        }
+    }
+     @keyframes text-6 {
+         88%{
+            opacity: 0;
+            text-shadow:3px 13px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(8px);
+            -webkit-transform: translateY(8px);
+            -o-transform: translateY(8px);
+            -moz-transform:translateY(8px);
+        }
+        100%{
+            opacity: 1;
+            text-shadow: 12px 15px 3px rgba(255, 64 ,64,0.8);
+            transform: translateY(10px);
+        }
+    }
+
+</style>
+
+<body>
+    <div class="containt">
+        <ul>
+            <li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+            <li><img src="images/6.jpg" alt=""></li>
+            <li><img src="images/7.jpg" alt=""></li>
+            <li><img src="images/10.jpg" alt=""></li>
+            <li><img src="images/20.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class="text">
+        <p>喜欢你甜甜的笑</p>
+        <p>喜欢你的机灵搞怪</p>
+        <p>喜欢你懂事的样子</p>
+        <p>但更爱你骄傲的样子</p>
+        <p>喜欢你小小年纪勤奋的样子</p>
+        <p>喜欢你带着星光的眼睛</p>
+    </div>
+</body>
+<script>
+    /*  */
+</script>
+</html>
+<!-- 
+其中文字按顺序依次显示，利用animation-delay做动画延迟发现连续动画只有在第一次起作用了，在之后没有了效果，之后我是利用
+动画的时长，来显示顺序，发现也是只有第一次达到了我想要的效果，之后动画完全不是按照想象中顺序，相反顺序错乱,再网上查资料然后用了
+这种方法
+ -->
+
